@@ -470,11 +470,6 @@ a.build-card:hover {
   max-width: 72rem;
   margin: 0 auto;
 }
-@media (max-width: 860px) {
-  .about-grid { grid-template-columns: 1fr; max-width: 34rem; }
-  .about-photo { position: static; max-width: 20rem; }
-}
-
 .about-photo {
   position: sticky; top: 6rem;
   border: 1px solid var(--line);
@@ -484,6 +479,11 @@ a.build-card:hover {
 }
 .about-photo img { filter: saturate(0.92) contrast(1.02); }
 .about-photo figcaption { margin-top: 0.7rem; text-align: center; }
+
+@media (max-width: 860px) {
+  .about-grid { grid-template-columns: 1fr; max-width: 34rem; }
+  .about-photo { position: static; max-width: 20rem; }
+}
 
 .about-text h2 {
   font-family: var(--serif);
