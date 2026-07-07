@@ -342,13 +342,26 @@ a { color: inherit; text-decoration: none; }
 .case:last-child { padding-bottom: 0; }
 
 .case-head {
-  display: flex; gap: 1.6rem; align-items: baseline;
+  display: flex; gap: 1.3rem; align-items: center;
   margin-bottom: 2rem;
 }
+.case-logo {
+  flex: none;
+  width: 3.6rem; height: 3.6rem;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid var(--line);
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+}
+.case-logo img { width: 58%; height: 58%; object-fit: contain; }
 .case-index {
   font-family: var(--mono);
-  font-size: 0.85rem;
+  font-size: 0.78rem;
+  font-weight: 400;
   color: var(--accent);
+  vertical-align: super;
+  margin-right: 0.1rem;
 }
 .case-head h3 {
   font-family: var(--serif);
