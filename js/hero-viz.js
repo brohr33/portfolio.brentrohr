@@ -10,7 +10,6 @@
   const ctx = canvas.getContext("2d");
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const coarsePointer = window.matchMedia("(pointer: coarse)").matches;
-  const scrollDriven = coarsePointer || window.innerWidth < 861;
   const FORCE = new URLSearchParams(location.search).get("viz"); // ?viz=full for review
 
   const INK = (a) => `rgba(22, 19, 14, ${a})`;
@@ -118,9 +117,10 @@
 
   /* ---- state -------------------------------------------------------------- */
   const pointer = { x: -1e4, y: -1e4, sx: -1e4, sy: -1e4, inside: false, lastMove: 0 };
-  const BUILD_TIME = 9; // seconds to fully assemble ambiently
+  // Assembly is time-based and only advances while the canvas is on screen,
+  // so it always plays out in front of the visitor (faster on touch devices).
+  const BUILD_TIME = coarsePointer ? 6 : 9;
   let energy = 0;
-  let scrollEnergy = 0;
   let latched = false; // once built, it stays built
   let last = performance.now();
   let running = false;
@@ -134,18 +134,6 @@
     pointer.lastMove = performance.now();
   });
   canvas.parentElement.addEventListener("pointerleave", () => { pointer.inside = false; });
-
-  if (scrollDriven) {
-    const hero = document.querySelector(".hero") || canvas;
-    const onScroll = () => {
-      const r = hero.getBoundingClientRect();
-      const vh = window.innerHeight;
-      const p = Math.min(Math.max((vh - r.top) / (vh * 0.9), 0), 1);
-      scrollEnergy = p * BUILD_TIME;
-    };
-    document.addEventListener("scroll", onScroll, { passive: true });
-    onScroll();
-  }
 
   const smooth = (t) => t * t * (3 - 2 * t);
   const clamp01 = (v) => Math.min(Math.max(v, 0), 1);
@@ -185,9 +173,6 @@
     // --- energy: ambient assembly, pointer accelerates, completion latches ---
     if (FORCE === "full") {
       energy = BUILD_TIME;
-    } else if (scrollDriven) {
-      energy = Math.max(energy, energy + (scrollEnergy - energy) * Math.min(dt * 2, 1));
-      energy += dt * 0.35; // still assembles on its own
     } else {
       const moving = now - pointer.lastMove < 900;
       const rate = pointer.inside && moving ? 2.2 : 1; // cursor speeds it up
