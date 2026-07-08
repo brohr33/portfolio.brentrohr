@@ -96,17 +96,3 @@ if (cycleTrack && cycleLine && !reducedMotion) {
   cycleLine.style.setProperty("--draw", 0);
 }
 
-/* ---- Hero art parallax ------------------------------------------------------ */
-const art = document.querySelector(".hero-art img");
-if (art && !reducedMotion) {
-  document.addEventListener(
-    "scroll",
-    () => {
-      const y = window.scrollY;
-      if (y < window.innerHeight * 1.4) {
-        art.style.transform = `translateY(${y * 0.06}px) scale(1.08)`;
-      }
-    },
-    { passive: true }
-  );
-}
