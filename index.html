@@ -23,10 +23,9 @@
     <a class="nav-name" href="#top">Brent Rohr<span class="accent">.</span></a>
     <nav class="nav-links" aria-label="Primary">
       <a href="#cycle"><span class="nav-num">01</span> The Cycle</a>
-      <a href="#platformos"><span class="nav-num">02</span> platformOS</a>
-      <a href="#work"><span class="nav-num">03</span> Work</a>
-      <a href="#building"><span class="nav-num">04</span> Building</a>
-      <a href="#about"><span class="nav-num">05</span> About</a>
+      <a href="#work"><span class="nav-num">02</span> Work</a>
+      <a href="#building"><span class="nav-num">03</span> Building</a>
+      <a href="#about"><span class="nav-num">04</span> About</a>
       <a href="#contact" class="nav-cta">Contact</a>
     </nav>
   </header>
@@ -44,8 +43,9 @@
           <div class="hero-foot">
             <p class="hero-sub reveal">10+ years shipping enterprise AI and platform products
             across fintech, tax, and HCM. I build the product, and I rebuild how teams build
-            it. Recently won three Tier-1 banks with enterprise AI, and stood up an AI-native
-            operating system that cut my team's meeting load by an estimated 80%.</p>
+            it. Recently won three Tier-1 banks with enterprise AI, and built an AI-native
+            operating system that replaced my team's planning ceremonies with a knowledge
+            graph.</p>
             <div class="hero-seat reveal" aria-hidden="true">
               <span class="mono-label">currently reading as</span>
               <span class="seat-word" id="seatWord">Engineer</span>
@@ -70,7 +70,7 @@
         <div class="marquee-track">
           <span>3 Tier-1 bank wins</span><span class="dot">●</span>
           <span>platformOS · AI-native operating system</span><span class="dot">●</span>
-          <span>~80% less meeting load</span><span class="dot">●</span>
+          <span>AI-SDLC · graph-driven planning</span><span class="dot">●</span>
           <span>+41% Salesforce opportunity creation</span><span class="dot">●</span>
           <span>+55% weekly active users</span><span class="dot">●</span>
           <span>4.7★ iOS · 22,000 reviews</span><span class="dot">●</span>
@@ -78,7 +78,7 @@
           <span>Product &amp; design org built 0 → 5</span><span class="dot">●</span>
           <span>3 Tier-1 bank wins</span><span class="dot">●</span>
           <span>platformOS · AI-native operating system</span><span class="dot">●</span>
-          <span>~80% less meeting load</span><span class="dot">●</span>
+          <span>AI-SDLC · graph-driven planning</span><span class="dot">●</span>
           <span>+41% Salesforce opportunity creation</span><span class="dot">●</span>
           <span>+55% weekly active users</span><span class="dot">●</span>
           <span>4.7★ iOS · 22,000 reviews</span><span class="dot">●</span>
@@ -144,55 +144,65 @@
       </div>
     </section>
 
-    <!-- ============ PLATFORMOS ============ -->
-    <section class="section featured" id="platformos">
-      <div class="section-head">
-        <span class="mono-label reveal accent-label">02 — Featured</span>
-        <h2 class="reveal">platformOS<span class="accent">.</span> An <em>AI-native</em> product operating system</h2>
-        <p class="section-intro reveal">Every product org has a knowledge base nobody trusts.
-        I turned ours into a graph the whole team commits to and builds from.</p>
-      </div>
-      <div class="case-body">
-        <div class="case-text">
-          <p><span class="case-label mono-label">What it is</span>
-          At Ryan I built platformOS, a team-wide knowledge graph that became the single source
-          of truth for how we build product. It links Azure DevOps, Jira, GitHub, and Aha into
-          a living web of strategy, context, and engineering artifacts. Our 15-person platform
-          org commits to it and queries it.</p>
-          <p><span class="case-label mono-label">What it does</span>
-          The graph feeds the work. It generates the technical plans behind story creation,
-          which turned traditional agile into an AI-SDLC. That accelerated planning cycles,
-          sped up feature delivery, and cut team meeting load by an estimated 80%. Now/next/later
-          roadmaps and capability artifacts stay in sync automatically, from executive
-          presentations down to end-of-week team reviews.</p>
-          <p><span class="case-label mono-label">Where it started</span>
-          It began at ModuleQ as a product operating system that linked commits, stories, and
-          discovery artifacts into one self-updating source of truth. At Ryan I took it further
-          into a full knowledge graph and an AI-SDLC.</p>
-          <p><span class="case-label mono-label">Stack</span>
-          <span class="tags"><span>Knowledge graph</span><span>AI-SDLC</span><span>Azure DevOps</span><span>Jira</span><span>GitHub</span><span>Aha</span></span></p>
-        </div>
-        <ul class="case-stats">
-          <li><span class="stat-num">~80%</span><span class="stat-label">less team meeting load (est.)</span></li>
-          <li><span class="stat-num">20+</span><span class="stat-label">products powered by the platform</span></li>
-          <li><span class="stat-num">15</span><span class="stat-label">person platform org built on the graph</span></li>
-        </ul>
-      </div>
-    </section>
-
     <!-- ============ WORK ============ -->
     <section class="section work" id="work">
       <div class="section-head">
-        <span class="mono-label reveal">03 — Selected Work</span>
+        <span class="mono-label reveal">02 — Selected Work</span>
         <h2 class="reveal">Proof, <em>not promises</em></h2>
       </div>
+
+      <!-- platformOS -->
+      <article class="case reveal" id="platformos">
+        <header class="case-head">
+          <span class="case-logo" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none" stroke="#e14e1f" stroke-width="1.5" stroke-linecap="round">
+              <line x1="16" y1="16" x2="7" y2="8"/>
+              <line x1="16" y1="16" x2="25" y2="10"/>
+              <line x1="16" y1="16" x2="14" y2="26"/>
+              <circle cx="16" cy="16" r="3" fill="#e14e1f" stroke="none"/>
+              <circle cx="7" cy="8" r="2.4" fill="#fff"/>
+              <circle cx="25" cy="10" r="2.4" fill="#fff"/>
+              <circle cx="14" cy="26" r="2.4" fill="#fff"/>
+            </svg>
+          </span>
+          <div>
+            <h3><span class="case-index" aria-hidden="true">01</span> platformOS</h3>
+            <p class="case-meta mono-label">Director of Platform Product · AI-native product operating system · Ryan (Tax.com) · 2025–present</p>
+          </div>
+        </header>
+        <div class="case-body">
+          <div class="case-text">
+            <p><span class="case-label mono-label">Problem</span>
+            Every product org has a knowledge base nobody trusts. Strategy, roadmaps, and
+            engineering artifacts live in separate tools and drift out of sync, so alignment
+            happens in meetings instead of in the work.</p>
+            <p><span class="case-label mono-label">What I did</span>
+            Built platformOS, a team-wide knowledge graph that became the single source of
+            truth for how we build product. It links Azure DevOps, Jira, GitHub, and Aha into
+            a living web of strategy, context, and engineering artifacts that our 15-person
+            platform org commits to and queries. The graph generates the technical plans behind
+            story creation, which turned traditional agile into an AI-SDLC and collapsed
+            recurring grooming, refinement, and planning ceremonies into graph-generated plans.
+            Now/next/later roadmaps stay in sync automatically, from executive presentations
+            down to end-of-week reviews. It started at ModuleQ linking commits, stories, and
+            discovery artifacts; at Ryan I took it further into a full knowledge graph.</p>
+            <p><span class="case-label mono-label">Stack</span>
+            <span class="tags"><span>Knowledge graph</span><span>AI-SDLC</span><span>Azure DevOps</span><span>Jira</span><span>GitHub</span><span>Aha</span></span></p>
+          </div>
+          <ul class="case-stats">
+            <li><span class="stat-num" data-count="20" data-suffix="+">20+</span><span class="stat-label">products powered by the platform</span></li>
+            <li><span class="stat-num" data-count="15">15</span><span class="stat-label">person platform org on the graph</span></li>
+            <li><span class="stat-num" data-count="4">4</span><span class="stat-label">delivery systems unified into one graph</span></li>
+          </ul>
+        </div>
+      </article>
 
       <!-- ModuleQ -->
       <article class="case reveal">
         <header class="case-head">
           <span class="case-logo"><img src="assets/moduleq.png" alt="ModuleQ logo" loading="lazy"></span>
           <div>
-            <h3><span class="case-index" aria-hidden="true">01</span> ModuleQ</h3>
+            <h3><span class="case-index" aria-hidden="true">02</span> ModuleQ</h3>
             <p class="case-meta mono-label">Director of Product · AI insights for investment banking · 2024–2025</p>
           </div>
         </header>
@@ -225,7 +235,7 @@
         <header class="case-head">
           <span class="case-logo"><img src="assets/luma.png" alt="Luma Financial logo" loading="lazy"></span>
           <div>
-            <h3><span class="case-index" aria-hidden="true">02</span> Luma Financial</h3>
+            <h3><span class="case-index" aria-hidden="true">03</span> Luma Financial</h3>
             <p class="case-meta mono-label">Director of Product &amp; Design · Structured products fintech · 2020–2024</p>
           </div>
         </header>
@@ -255,7 +265,7 @@
         <header class="case-head">
           <span class="case-logo"><img src="assets/paycor.png" alt="Paycor logo" loading="lazy"></span>
           <div>
-            <h3><span class="case-index" aria-hidden="true">03</span> Paycor</h3>
+            <h3><span class="case-index" aria-hidden="true">04</span> Paycor</h3>
             <p class="case-meta mono-label">Group PM ← PM ← Product Designer · HCM platform · 2016–2020</p>
           </div>
         </header>
@@ -284,7 +294,7 @@
     <!-- ============ STILL BUILDING ============ -->
     <section class="section building" id="building">
       <div class="section-head">
-        <span class="mono-label reveal inverse">04 — Still Building</span>
+        <span class="mono-label reveal inverse">03 — Still Building</span>
         <h2 class="reveal">Leaders who ship <em>stay sharp</em></h2>
         <p class="section-intro reveal">Strategy decks don't keep you honest. Production code does.
         These are live, self-built, and in daily use.</p>
@@ -319,7 +329,7 @@
           <figcaption class="mono-label">fig. 03 — the operator</figcaption>
         </figure>
         <div class="about-text">
-          <span class="mono-label reveal">05 — About</span>
+          <span class="mono-label reveal">04 — About</span>
           <h2 class="reveal">Player-coach<span class="accent">.</span> By choice<span class="accent">.</span></h2>
           <div class="reveal">
             <p>I'm a product leader who never stopped building. I started as a software
@@ -369,7 +379,7 @@
 
     <!-- ============ CONTACT ============ -->
     <section class="contact" id="contact">
-      <span class="mono-label reveal inverse">06 — Contact</span>
+      <span class="mono-label reveal inverse">05 — Contact</span>
       <h2 class="contact-title reveal">Let's build<span class="accent">.</span></h2>
       <p class="contact-sub reveal">Open to director, VP, and senior principal conversations.
       Remote first. Coffee if you're near Cincinnati or Phoenix.</p>
