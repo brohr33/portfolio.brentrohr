@@ -332,6 +332,16 @@ a { color: inherit; text-decoration: none; }
 
 .cycle-now h3 { color: var(--accent); }
 
+/* ---- Featured (platformOS) ---------------------------------------------------------------- */
+
+.featured {
+  background: var(--paper-deep);
+  border-top: 2px solid var(--accent);
+  border-bottom: 1px solid var(--line-faint);
+}
+.featured .accent-label { color: var(--accent); }
+.featured .case-body { max-width: 74rem; margin: 0 auto; }
+
 /* ---- Work / cases ---------------------------------------------------------------- */
 
 .work { background: var(--paper-deep); border-top: 1px solid var(--line-faint); border-bottom: 1px solid var(--line-faint); }
@@ -509,6 +519,17 @@ a.build-card:hover {
 }
 .about-text p { margin-bottom: 1.2rem; max-width: 36rem; }
 
+.skills {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  margin-top: 1.6rem;
+  padding-top: 1.6rem;
+  border-top: 1px solid var(--line);
+}
+.skills-group { display: flex; flex-wrap: wrap; gap: 0.8rem; align-items: baseline; }
+.skills-label { flex: 0 0 9rem; color: var(--accent); }
+
 .awards {
   list-style: none;
   margin-top: 2.2rem;
@@ -546,6 +567,8 @@ a.build-card:hover {
 }
 
 .contact-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+.contact-phone { margin-top: 1.4rem; color: rgba(246, 241, 231, 0.45); }
 
 .btn {
   font-family: var(--mono);
