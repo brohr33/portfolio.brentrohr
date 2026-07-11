@@ -25,7 +25,7 @@ if (reducedMotion) {
 }
 
 /* ---- Hero seat ticker ---------------------------------------------------- */
-const seats = ["Engineer", "Researcher", "Designer", "PM", "Director", "Builder"];
+const seats = ["Engineer", "Researcher", "Designer", "Product Manager", "Leader", "Builder"];
 const seatEl = document.getElementById("seatWord");
 if (seatEl && !reducedMotion) {
   let i = 0;
